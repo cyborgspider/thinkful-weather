@@ -9,7 +9,7 @@ module.exports =function(grunt){
           livereload: true
         },
         js: {
-          files:   ['src/scripts/*.js'],
+          files:   ['src/scripts/*'],
           tasks:   ['copy']
         },
         css:{
