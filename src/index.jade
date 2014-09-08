@@ -5,12 +5,11 @@ html(ng-app="OWMApp")
     link(href="css/styles.css", rel="stylesheet")
 
   body
-    .container
-      a(ui-sref="cities/Los Angeles") Los Angeles
-      a(ui-sref="cities/Dallas") Dallas
-      a(ui-sref="cities/Chicago") Chicago
+    a(href="cities/Los Angeles") Los Angeles
+    a(href="cities/Dallas") Dallas
+    a(href="cities/Chicago") Chicago
 
-      div(ui-view)
+    .container(ui-view)
 
     script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js")
     script(src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js")

@@ -5,17 +5,21 @@ angular.module('OWMApp',['ui.router'])
     $stateProvider
       .state('home',{
         url: '/home',
-        templateUrl: 'home.html'
+        templateUrl: 'home.html',
+        controller: 'HomeCtrl'
       })
-      .state('about',{
-        url: '/city',
-        templateUrl: 'city.html'
+      .state('cities.city',{
+        url: '/cities/:city',
+        templateUrl: 'city.html',
+        controller: function($scope, $stateParams){
+          $scope.city = $stateParams.city
+        }
       })
 
   })
   .controller('HomeCtrl', function($scope){
-    $scope.appname = 'Wed';
+    $scope.appname = 'Per';
   })
   .controller('CityCtrl', function($scope){
-    $scope.city = 'Der City';
+    $scope.city = $urlRouterProvider.city;
   });
